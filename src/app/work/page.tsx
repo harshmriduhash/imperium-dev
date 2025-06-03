@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FaCode, FaMobile, FaRobot, FaChartLine } from "react-icons/fa";
+import Footer from "@/components/Footer";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -163,6 +164,7 @@ export default function Work() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 } 

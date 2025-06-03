@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FaCalendar, FaUser, FaTag } from "react-icons/fa";
+import Footer from "@/components/Footer";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -26,7 +27,7 @@ export default function Blog() {
               Our Blog
             </h1>
             <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">
-              Insights, updates, and stories from our team of experts.
+              Insights, updates, and thoughts on technology, development, and digital innovation.
             </p>
           </div>
         </motion.div>
@@ -180,6 +181,7 @@ export default function Blog() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 } 

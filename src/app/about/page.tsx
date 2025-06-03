@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FaUsers, FaLightbulb, FaRocket, FaHandshake } from "react-icons/fa";
+import Footer from "@/components/Footer";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -167,6 +168,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 } 
