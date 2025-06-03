@@ -1,0 +1,284 @@
+import Image from "next/image";
+import { FaRocket, FaCode, FaMobile, FaRobot, FaCheck } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-black text-white flex flex-col font-sans">
+      {/* Navigation */}
+      <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex-shrink-0">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Imperium.dev</h1>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-center space-x-8">
+                <a href="#services" className="text-gray-300 hover:text-blue-400 transition-colors">Services</a>
+                <a href="#features" className="text-gray-300 hover:text-blue-400 transition-colors">Features</a>
+                <a href="#pricing" className="text-gray-300 hover:text-blue-400 transition-colors">Pricing</a>
+                <a href="#contact" className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium hover:shadow-lg hover:shadow-blue-500/20 transition-all">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20"></div>
+        <div className="max-w-7xl mx-auto relative">
+          <div className="text-center">
+            <h1 className="text-5xl sm:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+              Build Your MVP, Fast, Affordable, and Stress-Free
+            </h1>
+            <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">
+              Turning ideas into reality, fast. Let us take your idea from concept to a market-ready MVP in just a few weeks.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all">
+                Share Your Vision
+              </a>
+              <a href="#features" className="px-8 py-4 rounded-full border-2 border-gray-700 text-gray-300 font-semibold hover:border-blue-500 hover:text-blue-400 transition-all">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+            From Concept to Launch in Weeks, Not Months
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <FaRocket className="text-blue-500 text-xl" />,
+                title: "Rapid MVP Development",
+                description: "From concept to market-ready MVP in 5 weeks with iterative development and continuous feedback.",
+                bgColor: "bg-blue-900/20"
+              },
+              {
+                icon: <FaCode className="text-purple-500 text-xl" />,
+                title: "Modern Tech Stack",
+                description: "Built with the latest technologies and AI tools for faster development and better scalability.",
+                bgColor: "bg-purple-900/20"
+              },
+              {
+                icon: <FaRobot className="text-pink-500 text-xl" />,
+                title: "AI-Powered Solutions",
+                description: "Leverage cutting-edge AI to enhance your product's capabilities and user experience.",
+                bgColor: "bg-pink-900/20"
+              }
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className={`p-8 rounded-2xl ${feature.bgColor} border border-gray-800 hover:shadow-lg hover:shadow-blue-500/10 transition-all`}
+              >
+                <div className="w-12 h-12 rounded-full bg-black/50 flex items-center justify-center mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4 bg-gradient-to-br from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+            Our Services
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Web Development",
+                items: ["Full-stack Development", "Progressive Web Apps", "E-commerce Solutions"]
+              },
+              {
+                title: "Mobile Development",
+                items: ["iOS & Android Apps", "Cross-platform Solutions", "App Store Optimization"]
+              },
+              {
+                title: "AI Development",
+                items: ["Custom AI Models", "Machine Learning", "Natural Language Processing"]
+              },
+              {
+                title: "MVP Development",
+                items: ["Rapid Prototyping", "Market Validation", "Investor-Ready Products"]
+              }
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="p-8 rounded-2xl bg-black/50 border border-gray-800 hover:shadow-lg hover:shadow-blue-500/10 transition-all"
+              >
+                <h3 className="text-xl font-semibold mb-4 text-white">{service.title}</h3>
+                <ul className="space-y-3">
+                  {service.items.map((item, i) => (
+                    <li key={i} className="flex items-center text-gray-400">
+                      <FaCheck className="text-blue-500 mr-2" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 px-4 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+            Choose Your Plan
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Starter",
+                price: "$2,997",
+                features: ["Basic MVP Development", "4 Weeks Delivery", "Essential Features"],
+                highlighted: false
+              },
+              {
+                title: "Professional",
+                price: "$4,997",
+                features: ["Complete MVP Development", "5 Weeks Delivery", "Advanced Features", "Priority Support"],
+                highlighted: true
+              },
+              {
+                title: "Enterprise",
+                price: "Custom",
+                features: ["Custom Development", "Dedicated Team", "Premium Support", "Custom Timeline"],
+                highlighted: false
+              }
+            ].map((plan, index) => (
+              <div
+                key={index}
+                className={`p-8 rounded-2xl ${
+                  plan.highlighted 
+                    ? "bg-gradient-to-br from-blue-500 to-purple-500 text-white" 
+                    : "bg-black/50 border border-gray-800"
+                } transition-all relative hover:shadow-lg hover:shadow-blue-500/10`}
+              >
+                {plan.highlighted && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </div>
+                )}
+                <h3 className="text-2xl font-bold mb-4">{plan.title}</h3>
+                <p className="text-4xl font-bold mb-6">{plan.price}</p>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center">
+                      <FaCheck className={`mr-2 ${plan.highlighted ? "text-white" : "text-blue-500"}`} /> {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#contact"
+                  className={`block w-full py-3 text-center rounded-full ${
+                    plan.highlighted 
+                      ? "bg-white text-blue-600" 
+                      : "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+                  } font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all`}
+                >
+                  Get Started
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-4 bg-gradient-to-br from-gray-900 to-black">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-xl text-gray-300 mb-12">
+            Let's turn your idea into reality. We're accepting only 3 new clients for May.
+          </p>
+          <div className="bg-black/50 rounded-2xl border border-gray-800 p-8">
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                />
+              </div>
+              <textarea
+                placeholder="Tell us about your project"
+                rows={4}
+                className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+              ></textarea>
+              <button
+                type="submit"
+                className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all"
+              >
+                Share Your Vision
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-4 bg-black border-t border-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Imperium.dev</h3>
+              <p className="text-gray-400">
+                Building the future of digital products, one MVP at a time.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4 text-white">Services</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-blue-400 transition-colors">Web Development</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors">Mobile Development</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors">AI Development</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors">MVP Development</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4 text-white">Company</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-blue-400 transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors">Our Work</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors">Careers</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4 text-white">Contact</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>hello@imperium.dev</li>
+                <li>+1 (555) 123-4567</li>
+                <li>123 Innovation Street</li>
+                <li>San Francisco, CA 94107</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>© {new Date().getFullYear()} Imperium.dev. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+} 
