@@ -19,7 +19,7 @@ export default function RootLayout({
     // Simulate loading time (you can remove this in production)
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000); // Increased to 3 seconds to see the full particle animation
 
     return () => clearTimeout(timer);
   }, []);
