@@ -16,7 +16,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20"></div>
-        <motion.div 
+        <motion.div
           initial="initial"
           animate="animate"
           variants={fadeIn}
@@ -36,7 +36,7 @@ export default function About() {
       {/* Mission Section */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function About() {
       {/* Values Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -123,7 +123,7 @@ export default function About() {
       {/* Team Section */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
