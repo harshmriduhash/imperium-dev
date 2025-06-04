@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
       {/* Navigation */}
-      <motion.nav 
+      <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -36,30 +36,30 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-8">
-                <motion.a 
+                <motion.a
                   whileHover={{ scale: 1.05 }}
-                  href="#services" 
+                  href="#services"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   Services
                 </motion.a>
-                <motion.a 
+                <motion.a
                   whileHover={{ scale: 1.05 }}
-                  href="#features" 
+                  href="#features"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   Features
                 </motion.a>
-                <motion.a 
+                <motion.a
                   whileHover={{ scale: 1.05 }}
-                  href="#pricing" 
+                  href="#pricing"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   Pricing
                 </motion.a>
-                <motion.a 
+                <motion.a
                   whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}
-                  href="#contact" 
+                  href="#contact"
                   className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transition-all"
                 >
                   Get Started
@@ -73,13 +73,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20"></div>
-        <motion.div 
+        <motion.div
           initial="initial"
           animate="animate"
           variants={staggerContainer}
           className="max-w-7xl mx-auto relative"
         >
-          <motion.div 
+          <motion.div
             variants={fadeIn}
             className="text-center"
           >
@@ -90,16 +90,16 @@ export default function Home() {
               Turning ideas into reality, fast. Let us take your idea from concept to a market-ready MVP in just a few weeks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)" }}
-                href="#contact" 
+                href="#contact"
                 className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold transition-all"
               >
                 Share Your Vision
               </motion.a>
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.05, borderColor: "#3B82F6" }}
-                href="#features" 
+                href="#features"
                 className="px-8 py-4 rounded-full border-2 border-gray-700 text-gray-300 font-semibold transition-all"
               >
                 Learn More
@@ -111,14 +111,14 @@ export default function Home() {
 
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-black">
-        <motion.div 
+        <motion.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerContainer}
           className="max-w-7xl mx-auto"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeIn}
             className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
           >
@@ -164,14 +164,14 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 bg-gradient-to-br from-gray-900 to-black">
-        <motion.div 
+        <motion.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerContainer}
           className="max-w-7xl mx-auto"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeIn}
             className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
           >
@@ -218,14 +218,14 @@ export default function Home() {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-4 bg-black">
-        <motion.div 
+        <motion.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerContainer}
           className="max-w-7xl mx-auto"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeIn}
             className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
           >
@@ -256,11 +256,10 @@ export default function Home() {
                 key={index}
                 variants={fadeIn}
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.2)" }}
-                className={`p-8 rounded-2xl ${
-                  plan.highlighted 
-                    ? "bg-gradient-to-br from-blue-500 to-purple-500 text-white" 
+                className={`p-8 rounded-2xl ${plan.highlighted
+                    ? "bg-gradient-to-br from-blue-500 to-purple-500 text-white"
                     : "bg-black/50 border border-gray-800"
-                } transition-all relative`}
+                  } transition-all relative`}
               >
                 {plan.highlighted && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
@@ -279,11 +278,10 @@ export default function Home() {
                 <motion.a
                   whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}
                   href="#contact"
-                  className={`block w-full py-3 text-center rounded-full ${
-                    plan.highlighted 
-                      ? "bg-white text-blue-600" 
+                  className={`block w-full py-3 text-center rounded-full ${plan.highlighted
+                      ? "bg-white text-blue-600"
                       : "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
-                  } font-semibold transition-all`}
+                    } font-semibold transition-all`}
                 >
                   Get Started
                 </motion.a>
@@ -295,26 +293,26 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-gradient-to-br from-gray-900 to-black">
-        <motion.div 
+        <motion.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerContainer}
           className="max-w-4xl mx-auto text-center"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeIn}
             className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
           >
             Ready to Start Your Project?
           </motion.h2>
-          <motion.p 
+          <motion.p
             variants={fadeIn}
             className="text-xl text-gray-300 mb-12"
           >
             Let's turn your idea into reality. We're accepting only 3 new clients for May.
           </motion.p>
-          <motion.div 
+          <motion.div
             variants={fadeIn}
             className="bg-black/50 rounded-2xl border border-gray-800 p-8"
           >
