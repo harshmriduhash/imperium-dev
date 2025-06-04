@@ -84,7 +84,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-gray-400">
                 <FaPhone className="mr-3" />
-                +1 (555) 123-4567
+                +1 (555) 
               </li>
               <li className="flex items-center text-gray-400">
                 <FaMapMarkerAlt className="mr-3" />
