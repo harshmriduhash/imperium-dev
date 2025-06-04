@@ -88,7 +88,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-gray-400">
                 <FaMapMarkerAlt className="mr-3" />
-                San Francisco, CA
+                Bangalore, India
               </li>
             </ul>
           </div>
