@@ -331,6 +331,17 @@ export default function Home() {
                   className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 />
               </div>
+              <motion.select
+                whileFocus={{ scale: 1.02 }}
+                className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+              >
+                <option value="" disabled selected>Select Your Budget Range</option>
+                <option value="2k-5k">$2,000 - $5,000</option>
+                <option value="5k-10k">$5,000 - $10,000</option>
+                <option value="10k-25k">$10,000 - $25,000</option>
+                <option value="25k-50k">$25,000 - $50,000</option>
+                <option value="50k+">$50,000+</option>
+              </motion.select>
               <motion.textarea
                 whileFocus={{ scale: 1.02 }}
                 placeholder="Tell us about your project"
@@ -376,23 +387,28 @@ export default function Home() {
               <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/services/mvp-development" className="text-gray-400 hover:text-white transition-colors">
+                    MVP Development
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/web-development" className="text-gray-400 hover:text-white transition-colors">
                     Web Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                    Mobile Apps
+                  <Link href="/services/mobile-development" className="text-gray-400 hover:text-white transition-colors">
+                    Mobile App Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                    AI Solutions
+                  <Link href="/services/ai-solutions" className="text-gray-400 hover:text-white transition-colors">
+                    GenAI Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                    Cloud Services
+                  <Link href="/services/data-science" className="text-gray-400 hover:text-white transition-colors">
+                    Data Science & AI
                   </Link>
                 </li>
               </ul>
