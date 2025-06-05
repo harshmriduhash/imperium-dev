@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://imperium.dev/sitemap.xml
+
+# Disallow admin and private routes
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow all other routes
+Allow: /about
+Allow: /case-studies
+Allow: /services
+Allow: /blog
+Allow: /contact 

@@ -29,23 +29,28 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
             <ul className="space-y-4">
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/services/mvp-development" className="text-gray-400 hover:text-white transition-colors">
+                  MVP Development
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/web-development" className="text-gray-400 hover:text-white transition-colors">
                   Web Development
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                  Mobile Apps
+                <Link href="/services/mobile-development" className="text-gray-400 hover:text-white transition-colors">
+                  Mobile App Development
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                  AI Solutions
+                <Link href="/services/ai-solutions" className="text-gray-400 hover:text-white transition-colors">
+                  GenAI Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                  Cloud Services
+                <Link href="/services/data-science" className="text-gray-400 hover:text-white transition-colors">
+                  Data Science & AI
                 </Link>
               </li>
             </ul>
