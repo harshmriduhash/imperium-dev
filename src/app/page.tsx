@@ -52,10 +52,10 @@ export default function Home() {
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.05 }}
-                  href="#pricing"
+                  href="/case-studies"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
-                  Pricing
+                  Case Studies
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}
@@ -403,6 +403,11 @@ export default function Home() {
                 <li>
                   <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
                     About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/case-studies" className="text-gray-400 hover:text-white transition-colors">
+                    Case Studies
                   </Link>
                 </li>
                 <li>
